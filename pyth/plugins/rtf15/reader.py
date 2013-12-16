@@ -490,7 +490,11 @@ class Group(object):
                 char = unichr(uni_code)
 
         else:
-            char = chr(code).decode(self.charset, self.reader.errors)
+            try:
+                char = chr(code).decode(self.charset, self.reader.errors)
+            except UnicodeDecodeError:
+                # ugly hack to ignore bad chars
+                char = ''
 
         self.content.append(char)
 

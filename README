@@ -2,6 +2,8 @@
 pyth - Python text markup and conversion
 ========================================
 
+This fork contains an ugly hack that makes the rtf reader ignore bad unicode characters.
+
 Pyth is intended to make it easy to convert marked-up text between different common formats.
 
 *Marked-up text* means text which has:
